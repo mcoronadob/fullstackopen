@@ -1,0 +1,11 @@
+
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hdXJpY2lvIiwiaWQiOiI2YTg3MmI3NTIxYjVmOGJlZTgyODNkN2MiLCJpYXQiOjE3ODcyNTIyMjh9.TPa03L7X9SSaHOEi69A5y34fs_5oCdcj-M-WvKEct74
+
+{
+  "title": "Informe",
+  "author": "mauricio",
+  "url": "https://Informe.com",
+  "likes": 156
+}

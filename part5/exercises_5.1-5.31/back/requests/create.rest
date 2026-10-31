@@ -1,0 +1,11 @@
+
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjZhODc0ZDg2ZTA5MDFiNDdlOTVkOTY2ZCIsImlhdCI6MTc5MDg4NTQ1NH0.xIj_CfQMGBDN-EzF5KZxn-T9jkWN-NYgOITvRUxHErw
+
+{
+  "title": "Informe Root",
+  "author": "root",
+  "url": "https://InformeRoot.com",
+  "likes": 300
+}
