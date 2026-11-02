@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link, useNavigate } from 'react-router-dom'
 import BlogDetail from './components/BlogDetail'
@@ -109,12 +108,6 @@ const App = () => {
     }
   }
 
-  const navStyle = {
-    background: '#d3d3d3',
-    padding: 10,
-    marginBottom: 15
-  }
-
   const padding = { paddingRight: 5 }
 
   return (
@@ -123,21 +116,20 @@ const App = () => {
       <NavContainer>
         <NavBrand>Blog App</NavBrand>
         <NavLinks>
-        <Link style={padding} to="/">blogs</Link>
+          <Link style={padding} to="/">blogs</Link>
 
-        {user && (
-          <Link style={{ paddingRight: 5 }} to="/create">create new blog</Link>
-        )}
-        
-        {user ? (
-          <>
-            <span style={{ paddingRight: 10 }}>{user.name} logged in</span>
-            <button onClick={handleLogout}>logout</button>
-          </>
-        ) : (
-          <Link style={padding} to="/login">login</Link>
-        )}
-      </NavLinks>
+          {user && (
+            <Link style={{ paddingRight: 5 }} to="/create">create new blog</Link>
+          )}
+          {user ? (
+            <>
+              <span style={{ paddingRight: 10 }}>{user.name} logged in</span>
+              <button onClick={handleLogout}>logout</button>
+            </>
+          ) : (
+            <Link style={padding} to="/login">login</Link>
+          )}
+        </NavLinks>
       </NavContainer>
 
       <h2>blogs</h2>
@@ -165,11 +157,11 @@ const App = () => {
         } />
 
         <Route path="/blogs/:id" element={
-          <BlogDetail 
-            blogs={blogs} 
+          <BlogDetail
+            blogs={blogs}
             updateLikes={handleLikeOf}
             deleteBlog={handleDeleteOf}
-            user={user} 
+            user={user}
           />
         } />
 
